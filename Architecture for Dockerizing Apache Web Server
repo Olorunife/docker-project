@@ -1,0 +1,29 @@
+Web Browser =====> Docker Host =====> Docker Engine (dockered) =====> Docker container (Apache) ======> Apache Web Server
+
+
+Web browser is used by the user to interact with the web.
+
+When the user sends HTTPS request to the web server, it is received by the Docker container running the Apache webserver.
+
+Docker container runs on the Docker Host which is the machine that runs the Docker engine
+
+Docker Engine communicate this Docker API which is used to manage containers and images.
+
+Docker engine manages the container lifecycle including creation, start stop of containers 
+
+The docker container to the Apache web server is responsible for handling HTTP request and returning the appropriate responses. The apache web server listens on specific ports for incoming requests, processes the request and returns the response to the web server
+
+Container networkingnis used to allow the Apache web server running in the docker container to communicate with a web browser running on the host machine.
+
+The docker engine manage the container networking alarming the web server to receive incoming requests and send outgoing responses.
+
+In summary the dockerized apache web server project uses docker containers to isolate the apache web server and its dependencies from the host machines.
+This provides more consistent and reliable development and deployment environment while also making it easier to manage and scale the web server.
+
+Take aways
+- isolation - docker containers provides an isolated environment for running an Apache web server ensuring that its not impacted by any changes to the host system or other applications running on the same machine 
+- ⁠Consistency - by packaging the Apache web server and its dependencies into docker container, developers can ensure that the application runs consistently across different environments (staging, testing and production)
+- ⁠Reproduciblity- easy to share with other
+- ⁠scalability
+- ⁠Security
+- ⁠Flexibility for building applications
