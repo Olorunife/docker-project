@@ -12,3 +12,10 @@ RUN echo '<h1>Hello from Docker Apache!</h1>' > /var/www/html/index.html
 
 EXPOSE 80
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
+
+
+
+#terminal commands
+docker-project$ docker run --platform linux/amd64 -p 80:80 httpd:2.4
+docker run -p 8080:80 my-apache-image
